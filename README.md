@@ -145,9 +145,13 @@ To create a new convolutional network to work with the DCASE 2016 task 4 databas
 3. Evaluation
 	To evaluate the model, you must go to evaluation.py and write the proper routes to the files exported in the step 2, in the lines:
 	For grad
+	
     list_audios = np.load('GRAD_Results/list_audios.npy')
+    
     y_pred = np.load('GRAD_Results/y_pred.npy')
+    
     y_real = np.load('GRAD_Results/y_real.npy')
+    
     y_sig = np.load('GRAD_Results/y_sig.npy')
 
     Once you have done this, you can run the code from a terminal by doing python evaluation.py and then you will have your statistics.
