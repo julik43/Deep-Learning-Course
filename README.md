@@ -3,8 +3,7 @@ This git is part of the course Deep Learning at the UNAM, teached by the PhD. Gi
 
 This git has the aim to recreate the experiment of "Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging" and to create a new convolutional network to work with the DCASE 2016 task 4 database.
 
-To recreate the experiment of: 
-Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging
+# To recreate the experiment of: Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging
 Available in: https://github.com/yongxuUSTC/aDAE_DNN_audio_tagging
 
 You need to follow the next steps:
