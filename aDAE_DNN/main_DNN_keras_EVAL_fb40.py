@@ -28,8 +28,8 @@ from keras.optimizers import SGD,Adam
 
 # resize data for fit into CNN. size: (batch_num*color_maps*height*weight)
 def reshapeX( X ):
-    N = len(X)
-    return X.reshape( (N, fea_dim*agg_num) )
+		N = len(X)
+		return X.reshape( (N, fea_dim*agg_num) )
 
 
 
@@ -37,26 +37,26 @@ def reshapeX( X ):
 # hyper-params
 fe_fd = cfg.dev_fe_mel_fd
 #fe_fd_ori = cfg.dev_fe_mel_fd_ori
-agg_num = 91        # concatenate frames
-hop = 7            # step_len
+agg_num = 91				# concatenate frames
+hop = 7						# step_len
 n_hid = 1000
 n_out = len( cfg.labels )
 print n_out
 
 # For MFB 40 
-# fold = 4           # can be 0, 1, 2, 3, 4
+# fold = 4					 # can be 0, 1, 2, 3, 4
 # fea_dim=40
 
 # # For MFCC 24
-# fold = 4           # can be 0, 1, 2, 3, 4
+# fold = 4					 # can be 0, 1, 2, 3, 4
 # fea_dim=24
 
 # For syDAE de 50
-fold = 4           # can be 0, 1, 2, 3, 4
+fold = 4					 # can be 0, 1, 2, 3, 4
 fea_dim=200
 
 # # For asyDAE de 50
-# fold = 4           # can be 0, 1, 2, 3, 4
+# fold = 4					 # can be 0, 1, 2, 3, 4
 # fea_dim=50
 
 
@@ -103,10 +103,10 @@ model.compile(loss='binary_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 dump_fd=cfg.scrap_fd+'/Md/dnn_fb40_EVAL_fr91_bcCOST_keras_weights.{epoch:02d}-{val_loss:.2f}.hdf5'
 
-eachmodel=ModelCheckpoint(dump_fd,monitor='val_loss',verbose=0,save_best_only=False,save_weights_only=False,mode='auto')      
+eachmodel=ModelCheckpoint(dump_fd,monitor='val_loss',verbose=0,save_best_only=False,save_weights_only=False,mode='auto')			
 
 model.fit(tr_X, tr_y, batch_size=100, nb_epoch=51,
-              verbose=1, validation_data=(te_X, te_y), callbacks=[eachmodel]) #, callbacks=[best_model])
+							verbose=1, validation_data=(te_X, te_y), callbacks=[eachmodel]) #, callbacks=[best_model])
 #score = model.evaluate(te_X, te_y, show_accuracy=True, verbose=0)
 #print('Test score:', score[0])
 #print('Test accuracy:', score[1])

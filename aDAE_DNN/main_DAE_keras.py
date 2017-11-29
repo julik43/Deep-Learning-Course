@@ -28,8 +28,8 @@ from keras.optimizers import SGD,Adam
 
 # resize data for fit into CNN. size: (batch_num*color_maps*height*weight)
 def reshapeX( X ):
-    N = len(X)
-    return X.reshape( (N, fea_dim*agg_num) )
+		N = len(X)
+		return X.reshape( (N, fea_dim*agg_num) )
 
 
 
@@ -37,12 +37,12 @@ def reshapeX( X ):
 # hyper-params
 fe_fd = cfg.dev_fe_mel_fd
 #fe_fd_ori = cfg.dev_fe_mel_fd_ori
-agg_num = 7        # concatenate frames
-hop = 1            # step_len
+agg_num = 7				# concatenate frames
+hop = 1						# step_len
 n_hid = 100
 n_out = len( cfg.labels )
 print n_out
-fold = 3            # can be 0, 1, 2, 3, 4
+fold = 3						# can be 0, 1, 2, 3, 4
 fea_dim=40
 #fea_dim=24
 
