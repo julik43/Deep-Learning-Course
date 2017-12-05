@@ -3,7 +3,9 @@ This git is part of the course Deep Learning at the UNAM, teached by the PhD. Gi
 
 This git has the aim to recreate the experiment of "Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging" and to create a new convolutional network to work with the DCASE 2016 task 4 database.
 
-# To recreate the experiment of: Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging
+# To recreate the experiment
+
+To recreate the experiment of: Unsupervised Feature Learning Based on Deep Models for Environmental Audio Tagging
 Available in: https://github.com/yongxuUSTC/aDAE_DNN_audio_tagging
 
 You need to follow the next steps:
@@ -170,7 +172,9 @@ Note: to the generation of the symetric and asymetric characteristics we only us
 	Then run the code from a terminal by doing python recognize_dnn_1ch_keras_NAT_eva.py
 
 
-# To create a new convolutional network to work with the DCASE 2016 task 4 database.
+# To create a new CNN
+
+To create a new convolutional network to work with the DCASE 2016 task 4 database.
 
 1. Download the "dcase2016_task4-master" database	
 
